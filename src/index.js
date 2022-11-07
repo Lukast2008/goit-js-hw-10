@@ -21,8 +21,11 @@ function createNewQuery(event) {
   const value = event.target.value.trim();
 
   if (!value) {
+    countryInfo.innerHTML = '';
+    countryList.innerHTML = '';
     return;
   }
+
   clearCountryBox();
 
   fetchCountries(value)
